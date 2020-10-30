@@ -7,7 +7,7 @@ namespace carloancalculator {
 		static CarLoanCalculator() {
 			unchecked{
 				#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
-				global::haxe.lang.FieldLookup.addFields(new int[]{5541879, 13816588}, new string[]{"obj", "SuppressWarnings"});
+				global::haxe.lang.FieldLookup.addFields(new int[]{5541879, 5790315, 13816588, 338842564, 678404778, 957002115, 1005224604, 1217089161, 1842834182}, new string[]{"obj", "tax", "SuppressWarnings", "total", "interest", "registerMyMethods", "frequency", "price", "payment"});
 				#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
 				{
 					#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
@@ -37,6 +37,9 @@ namespace carloancalculator {
 		protected static void __hx_ctor_carloancalculator_CarLoanCalculator(global::carloancalculator.CarLoanCalculator __hx_this, global::maglev.MagLev maglev) {
 			#line 15 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
 			__hx_this.maglev = maglev;
+			__hx_this.calc = new global::carloancalculator.Calc();
+			#line 17 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+			__hx_this.registerMyMethods();
 		}
 		#line default
 		
@@ -44,10 +47,30 @@ namespace carloancalculator {
 		
 		public global::maglev.MagLev maglev;
 		
+		public global::carloancalculator.Calc calc;
+		
+		public virtual void registerMyMethods() {
+			#line 19 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+			global::carloancalculator.CarLoanCalculator _gthis = this;
+			this.maglev.register("CarLoanCalculator.CalcPayments", global::maglev.MagLevFunction.fromFunction(new global::carloancalculator.CarLoanCalculator_registerMyMethods_20__Fun(_gthis)));
+			#line 45 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+			this.maglev.register("CarLoanCalculator.CalcAffordability", global::maglev.MagLevFunction.fromFunction(new global::carloancalculator.CarLoanCalculator_registerMyMethods_45__Fun(_gthis)));
+		}
+		#line default
+		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
 				#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
 				switch (hash) {
+					case 1102715029:
+					{
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						this.calc = ((global::carloancalculator.Calc) (@value) );
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						return @value;
+					}
+					
+					
 					case 858513194:
 					{
 						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
@@ -74,6 +97,20 @@ namespace carloancalculator {
 			unchecked {
 				#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
 				switch (hash) {
+					case 957002115:
+					{
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "registerMyMethods", 957002115)) );
+					}
+					
+					
+					case 1102715029:
+					{
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						return this.calc;
+					}
+					
+					
 					case 858513194:
 					{
 						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
@@ -94,13 +131,152 @@ namespace carloancalculator {
 		}
 		
 		
+		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
+			unchecked {
+				#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				switch (hash) {
+					case 957002115:
+					{
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						this.registerMyMethods();
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						break;
+					}
+					
+					
+					default:
+					{
+						#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						return base.__hx_invokeField(field, hash, dynargs);
+					}
+					
+				}
+				
+				#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				return null;
+			}
+			#line default
+		}
+		
+		
 		public override void __hx_getFields(global::Array<string> baseArr) {
+			#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+			baseArr.push("calc");
 			#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
 			baseArr.push("maglev");
 			#line 11 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default
+		
+	}
+}
+
+
+
+#pragma warning disable 109, 114, 219, 429, 168, 162
+namespace carloancalculator {
+	public class CarLoanCalculator_registerMyMethods_20__Fun : global::haxe.lang.Function {
+		
+		public CarLoanCalculator_registerMyMethods_20__Fun(global::carloancalculator.CarLoanCalculator _gthis) : base(1, 0) {
+			#line 20 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+			this._gthis = _gthis;
+		}
+		#line default
+		
+		public override object __hx_invoke1_o(double __fn_float1, object __fn_dyn1) {
+			unchecked {
+				#line 20 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				global::maglev.MagLevArray args = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (((global::maglev.MagLevArray) (((object) (__fn_float1) )) )) : (((global::maglev.MagLevArray) (__fn_dyn1) )) );
+				double newCarPrice = (((global::maglev.MagLevNumber) (args.@get(0)) )).getFloat();
+				#line 22 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				double tradeInAllowance = (((global::maglev.MagLevNumber) (args.@get(1)) )).getFloat();
+				double tradeInLoanBalance = (((global::maglev.MagLevNumber) (args.@get(2)) )).getFloat();
+				#line 24 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				double downPaymentAndRebates = (((global::maglev.MagLevNumber) (args.@get(3)) )).getFloat();
+				double loanDuration = (((global::maglev.MagLevNumber) (args.@get(4)) )).getFloat();
+				#line 26 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				double salesTaxRate = (((global::maglev.MagLevNumber) (args.@get(5)) )).getFloat();
+				double interestRate = (((global::maglev.MagLevNumber) (args.@get(6)) )).getFloat();
+				#line 28 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				global::Array<object> payments = this._gthis.calc.calcPayments(newCarPrice, tradeInAllowance, tradeInLoanBalance, downPaymentAndRebates, loanDuration, salesTaxRate, interestRate);
+				#line 35 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				global::maglev.MagLevArray arr = global::maglev.MagLevArray.create();
+				{
+					#line 36 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+					int _g = 0;
+					#line 36 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+					while (( _g < payments.length )) {
+						#line 36 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						object payment = payments[_g];
+						#line 36 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						 ++ _g;
+						global::maglev.MagLevObject obj = global::maglev.MagLevObject.create();
+						#line 38 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						obj.@set("frequency", global::maglev.MagLevString.fromString(global::haxe.lang.Runtime.toString(global::haxe.lang.Runtime.getField(payment, "frequency", 1005224604, true))));
+						obj.@set("payment", global::maglev.MagLevNumber.fromFloat(global::haxe.lang.Runtime.getField_f(payment, "payment", 1842834182, true)));
+						#line 40 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+						obj.@set("interest", global::maglev.MagLevNumber.fromFloat(global::haxe.lang.Runtime.getField_f(payment, "interest", 678404778, true)));
+						arr.push(obj);
+					}
+					
+				}
+				
+				#line 43 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				return global::maglev.MagLevResult.fromResult(arr);
+			}
+			#line default
+		}
+		
+		
+		public global::carloancalculator.CarLoanCalculator _gthis;
+		
+	}
+}
+
+
+
+#pragma warning disable 109, 114, 219, 429, 168, 162
+namespace carloancalculator {
+	public class CarLoanCalculator_registerMyMethods_45__Fun : global::haxe.lang.Function {
+		
+		public CarLoanCalculator_registerMyMethods_45__Fun(global::carloancalculator.CarLoanCalculator _gthis) : base(1, 0) {
+			#line 45 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+			this._gthis = _gthis;
+		}
+		#line default
+		
+		public override object __hx_invoke1_o(double __fn_float1, object __fn_dyn1) {
+			unchecked {
+				#line 45 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				global::maglev.MagLevArray args = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (((global::maglev.MagLevArray) (((object) (__fn_float1) )) )) : (((global::maglev.MagLevArray) (__fn_dyn1) )) );
+				double monthlyPayment = (((global::maglev.MagLevNumber) (args.@get(0)) )).getFloat();
+				#line 47 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				double tradeInAllowance = (((global::maglev.MagLevNumber) (args.@get(1)) )).getFloat();
+				double tradeInLoanBalance = (((global::maglev.MagLevNumber) (args.@get(2)) )).getFloat();
+				#line 49 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				double downPaymentAndRebates = (((global::maglev.MagLevNumber) (args.@get(3)) )).getFloat();
+				double loanDuration = (((global::maglev.MagLevNumber) (args.@get(4)) )).getFloat();
+				#line 51 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				double salesTaxRate = (((global::maglev.MagLevNumber) (args.@get(5)) )).getFloat();
+				double interestRate = (((global::maglev.MagLevNumber) (args.@get(6)) )).getFloat();
+				#line 53 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				object result = this._gthis.calc.calcAffordability(monthlyPayment, tradeInAllowance, tradeInLoanBalance, downPaymentAndRebates, loanDuration, salesTaxRate, interestRate);
+				#line 60 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				global::maglev.MagLevObject obj = global::maglev.MagLevObject.create();
+				obj.@set("price", global::maglev.MagLevNumber.fromFloat(global::haxe.lang.Runtime.getField_f(result, "price", 1217089161, true)));
+				#line 62 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				obj.@set("tax", global::maglev.MagLevNumber.fromFloat(global::haxe.lang.Runtime.getField_f(result, "tax", 5790315, true)));
+				obj.@set("interest", global::maglev.MagLevNumber.fromFloat(global::haxe.lang.Runtime.getField_f(result, "interest", 678404778, true)));
+				#line 64 "/my-component/src/carloancalculator/CarLoanCalculator.hx"
+				obj.@set("total", global::maglev.MagLevNumber.fromFloat(global::haxe.lang.Runtime.getField_f(result, "total", 338842564, true)));
+				return global::maglev.MagLevResult.fromResult(obj);
+			}
+			#line default
+		}
+		
+		
+		public global::carloancalculator.CarLoanCalculator _gthis;
 		
 	}
 }

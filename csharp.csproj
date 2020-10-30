@@ -65,6 +65,8 @@
 	
     <Compile Include="src\carloancalculator\CarLoanCalculator.cs"/>
 	
+    <Compile Include="src\carloancalculator\Calc.cs"/>
+	
     <Compile Include="src\UInt.cs"/>
 	
   </ItemGroup>

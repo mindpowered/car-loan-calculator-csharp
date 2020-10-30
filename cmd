@@ -9,4 +9,5 @@
 src\EnumValue.cs
 src\Type.cs
 src\carloancalculator\CarLoanCalculator.cs
+src\carloancalculator\Calc.cs
 src\UInt.cs

@@ -264,6 +264,8 @@ M System.UIntPtr
 M System.Runtime.Remoting.Contexts.IDynamicProperty
 M carloancalculator.CarLoanCalculator
 C carloancalculator.CarLoanCalculator
+C carloancalculator.CarLoanCalculator_registerMyMethods_20__Fun
+C carloancalculator.CarLoanCalculator_registerMyMethods_45__Fun
 M cs.system.TimeSpan
 M System.Runtime.InteropServices._MethodBase
 M System.Runtime.Remoting.ObjectHandle
@@ -370,6 +372,8 @@ M System.Reflection.Emit.AssemblyBuilder
 M System.Math
 M cs.system.security.policy.PolicyStatementAttribute
 M haxe.iterators.StringIteratorUnicode
+M carloancalculator.Calc
+C carloancalculator.Calc
 M System.Attribute
 M System.IO.Stream
 M System.Security.AccessControl.ObjectSecurity
