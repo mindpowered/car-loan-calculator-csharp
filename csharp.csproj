@@ -69,6 +69,8 @@
 	
     <Compile Include="src\UInt.cs"/>
 	
+    <Compile Include="src\mindpowered\carloancalculator\CarLoanCalculator.cs"/>
+	
   </ItemGroup>
   
   <ItemGroup />

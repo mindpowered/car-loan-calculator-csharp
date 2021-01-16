@@ -482,6 +482,8 @@ M System.Int64
 M System.Runtime.Remoting.IChannelInfo
 M haxe.CallStack
 M StringBuf
+M mindpowered.carloancalculator.CarLoanCalculator
+C mindpowered.carloancalculator.CarLoanCalculator
 end modules
 begin resources
 end resources
