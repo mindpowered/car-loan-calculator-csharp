@@ -2,16 +2,16 @@
 <package>
   <metadata>
     <id>mindpowered.carloancalculator</id>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <title>carloancalculator</title>
     <authors>Mind Powered Corporation</authors>
     <owners>Mind Powered Corporation</owners>
     <licenseUrl>https://mindpowered.dev/?ref=nuget</licenseUrl>
-    <projectUrl>https://mindpowered.dev/?ref=nuget</projectUrl>
+    <projectUrl>https://github.com/mindpowered/carloancalculator-csharp</projectUrl>
     <iconUrl>https://www.website.com/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Car Loan Auto Loan Payment Calculator - Calculate financing on a new car including trade-in and taxes</description>
-    <releaseNotes>Version 0.0.5</releaseNotes>
+    <releaseNotes>Version 0.0.6</releaseNotes>
     <copyright>Copyright 2020 Mind Powered Corporation</copyright>
     <tags>mindpowered</tags>
     <dependencies>
